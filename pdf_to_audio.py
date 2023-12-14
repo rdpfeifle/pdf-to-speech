@@ -51,3 +51,14 @@ def convert_text_to_speech(text, audio_file_name):
 
     audio.save(audio_file_name)
 
+
+def main():
+    """Call the functions."""
+
+    pdf_text = extract_text_from_pdf("path_to_your_pdf.pdf")
+    convert_text_to_speech(pdf_text, "output_audio.mp3")
+
+
+if __name__ == "__main__":
+    # calling the main function
+    main()
