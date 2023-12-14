@@ -15,7 +15,6 @@ virtualenv env
 source env/bin/activate
 
 pip3 install -r requirements.txt
-
 ```
 
 ### Running the code
@@ -26,4 +25,4 @@ python3 pdf_to_audio.py
 
 ## Contact
 
-Raquel Pfeifle - [LinkedIn](#https://www.linkedin.com/in/raqueldpfeifle)
+Raquel Pfeifle - [LinkedIn](https://www.linkedin.com/in/raqueldpfeifle)
