@@ -32,19 +32,19 @@ def extract_text_from_pdf(file_to_read):
     return combined_text
 
 
-def convert_text_to_speech(text, audio_file_name):
+def convert_text_to_speech(text, language, audio_file_name):
     """
     Converts the text into an audio file and saves it.
 
     Arguments: 
     text (str): The text to be converted to speech.
+    language (str): The language code to be used for speech conversion 
+    (e.g., 'en' for English, 'es' for Spanish).
     audio_file_name (str): The name of the output audio file, including the file extension (e.g., '.mp3').
 
     Returns:
     Saves the audio to a file.
     """
-
-    language = "en"
 
     # Create an audio with the specified language and speed settings
     audio = gTTS(text=text, lang=language, slow=False)
@@ -62,7 +62,7 @@ def main():
 
     # Convert the extracted text to audio and save it. 
     # Choose your desired file name, ensuring it ends with '.mp3' like below.
-    convert_text_to_speech(pdf_text, "output_audio.mp3")
+    convert_text_to_speech(pdf_text, "en", "output_audio.mp3")
 
 
 if __name__ == "__main__":
