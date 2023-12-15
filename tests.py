@@ -10,7 +10,7 @@ class Pdf_to_Speech_TestCase(unittest.TestCase):
     """Tests for PDF to Speech extraction."""
 
     def test_extract_text_from_pdf(self):
-        """Text if text is being extracted from pdf."""
+        """Test if text has been extracted from pdf."""
 
         expected_text = "developers"
 
