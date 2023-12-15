@@ -1,5 +1,5 @@
 from PyPDF2 import PdfReader
-from gtts import gTTS
+from gtts import gTTS, gTTSError
 
 def extract_text_from_pdf(file_to_read):
     """
@@ -45,11 +45,18 @@ def convert_text_to_speech(text, language, audio_file_name):
     Returns:
     Saves the audio to a file.
     """
+    
+    try:
+        # Create an audio with the specified language and speed settings
+        audio = gTTS(text=text, lang=language, slow=False)
 
-    # Create an audio with the specified language and speed settings
-    audio = gTTS(text=text, lang=language, slow=False)
+        audio.save(audio_file_name)
 
-    audio.save(audio_file_name)
+    except gTTSError as error:
+        if "429" in str(error):
+            print("Oops, too many requests right now. Please try again later.")
+        else:
+            raise error
 
 
 def main():
