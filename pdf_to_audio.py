@@ -65,7 +65,7 @@ def main():
     # Modify the path below to point to your PDF file. 
     # Make sure to include the '.pdf' extension.
     # Example: "documents/my_file.pdf"
-    pdf_text = extract_text_from_pdf("path_to_your_pdf.pdf")
+    pdf_text = extract_text_from_pdf("Developer_Jokes.pdf")
 
     # Convert the extracted text to audio and save it. 
     # Choose your desired file name, ensuring it ends with '.mp3' like below.
